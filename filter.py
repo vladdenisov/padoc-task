@@ -12,10 +12,6 @@ def headerIsExistingFilter(elem, doc):
     else:
       headers.append(text)
 
-def replaceHeaderWithBold(elem, doc):
-  if isinstance(elem, pf.Str):
-    return pf.Str(elem.text.capitalize())
-
 def levelHeaderFilter(elem, doc):
   if (isinstance(elem, pf.Header)):
     if (elem.level > 2):
