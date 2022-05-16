@@ -14,7 +14,7 @@ def headerIsExistingFilter(elem, doc):
 def levelHeaderFilter(elem, doc):
   if (isinstance(elem, pf.Header)):
     if (elem.level > 2):
-      return pf.Plain(pf.Str(pf.stringify(elem).upper()))
+      return pf.Header(pf.Str(pf.stringify(elem).upper()), level=elem.level)
 
 def boldify(doc):
   doc.replace_keyword('BOLD', pf.Strong(pf.Str('BOLD')))
