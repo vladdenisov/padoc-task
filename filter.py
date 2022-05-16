@@ -1,6 +1,5 @@
 import sys
 import panflute as pf
-from requests import head
 
 headers = []
 
